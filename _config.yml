@@ -12,12 +12,4 @@ github_username:  zkwang2014
 markdown: kramdown
 
 #Comments
-comments : 
-  provider : disqus
-  disqus :
-    short_name : zkwang
-  facebook :
-    appid : 123
-    num_posts: 5
-    width: 580
-    colorscheme: light
+comments : True
