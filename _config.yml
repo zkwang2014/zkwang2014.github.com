@@ -7,7 +7,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://zkwang.org" # the base hostname & protocol for your site
 
 github_username:  zkwang2014
-wordpress_username: zkwang2014
+wordpress_username: zkwang
 
 # Build settings
 markdown: kramdown
