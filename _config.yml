@@ -2,7 +2,7 @@
 title: zkwang
 email: zkwang2014@outlook.com
 description: > # this means to ignore newlines until "baseurl:"
-This is blog for Kai. Go Gators!
+  This is blog for Kai. Go Gators!
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://zkwang.org" # the base hostname & protocol for your site
 twitter_username: zkwang2014
