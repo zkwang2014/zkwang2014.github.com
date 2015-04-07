@@ -10,6 +10,3 @@ github_username:  zkwang2014
 
 # Build settings
 markdown: kramdown
-
-#Comments
-comments : True
