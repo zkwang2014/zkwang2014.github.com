@@ -12,7 +12,7 @@ github_username:  zkwang2014
 markdown: kramdown
 
 #Comments
-comments : true
+comments : 
   provider : disqus
   disqus :
     short_name : jekyllbootstrap
