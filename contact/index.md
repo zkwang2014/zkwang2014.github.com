@@ -1,7 +1,7 @@
 ---
 layout: post
 title: contact
-permalink: /guestbook/
+permalink: /contact/
 ---
 
 My contact information:
