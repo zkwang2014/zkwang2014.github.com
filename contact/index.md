@@ -1,7 +1,11 @@
 ---
 layout: post
-title: guestbook
+title: contact
 permalink: /guestbook/
 ---
 
-This is the guestbook.
+My contact information:
+
+
+
+Please leave your message here.
