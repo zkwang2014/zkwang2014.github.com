@@ -12,6 +12,7 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 Jekyll also offers powerful support for code snippets:
 
 {% highlight r %}
+
 permutest.r
 function () 
 {
@@ -33,7 +34,7 @@ fit <- lm(mpg~disp+hp+wt+drat, data=mtcars)
 # Influential Observations
 # added variable plots 
 av.Plots(fit)
-# Cook's D plot
+# Cook s D plot
 # identify D values > 4/(n-k-1) 
 cutoff <- 4/((nrow(mtcars)-length(fit$coefficients)-2)) 
 plot(fit, which=4, cook.levels=cutoff)
