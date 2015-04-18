@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Hello World"
 date:   2015-04-10 20:52:22
 categories: blog
 tags: Jekyll
@@ -11,12 +11,35 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 
 Jekyll also offers powerful support for code snippets:
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+{% highlight r %}
+permutest.r
+function () 
+{
+out<-numeric(1000)
+for (i in 1:1000){
+X<-sample(sim1.out$Y,replace=F)
+T<-sim1.out$T
+dfr<-data.frame(cbind(X,T))
+pomodi<-polr(factor(X)~T,data=dfr)
+sp<-summary(pomodi)
+out[i]<-(sp$coef[1,1]-1)/sp$coef[1,2]
+}
+out
+}
+# Assume that we are fitting a multiple linear regression
+# on the MTCARS data
+library(car)
+fit <- lm(mpg~disp+hp+wt+drat, data=mtcars)
+# Influential Observations
+# added variable plots 
+av.Plots(fit)
+# Cook's D plot
+# identify D values > 4/(n-k-1) 
+cutoff <- 4/((nrow(mtcars)-length(fit$coefficients)-2)) 
+plot(fit, which=4, cook.levels=cutoff)
+# Influence Plot 
+influencePlot(fit,	id.method="identify", main="Influence Plot", sub="Circle size is proportial to Cook's Distance" )
+
 {% endhighlight %}
 
 Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
