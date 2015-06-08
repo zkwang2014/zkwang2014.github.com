@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "cluster II"
+title: "Notes on Cluster II"
 description: "cluster"
 category: notes
 tags: []
