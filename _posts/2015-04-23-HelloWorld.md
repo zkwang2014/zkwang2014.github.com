@@ -1,5 +1,6 @@
 ---
 layout: post
+include: header
 title: "Hello World"
 description: "blog"
 category: blog
