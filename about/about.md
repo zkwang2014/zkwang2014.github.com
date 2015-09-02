@@ -6,7 +6,7 @@ permalink: /about/
 
 <p><img src="https://github.com/zkwang2014/zkwang2014.github.io/raw/master/about/photo_1024.jpg" width = "150" height = "200" title="zkwang" align="center" /></p> 
 
-This is Blog for Kai. I'm a second year Biostatistics graduate student at University of Florida. [my CV](https://github.com/zkwang2014/zkwang2014.github.io/raw/master/about/photo_1024.jpg)
+This is Blog for Kai. I'm a second year Biostatistics graduate student at University of Florida [Department of Biostatistics](biostat.ufl.edu)
 
 My Chinese Blog is on [WordPress](https://zkwang2014.wordpress.com/)
 
