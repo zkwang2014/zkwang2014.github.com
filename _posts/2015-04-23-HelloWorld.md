@@ -1,10 +1,9 @@
 ---
 layout: post
-include: header
 title: "Hello World"
 description: "blog"
 category: blog
-tags: []
+tags: [memo]
 ---
 Hello World. 
 

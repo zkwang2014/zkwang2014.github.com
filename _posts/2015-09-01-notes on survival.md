@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "notes on LASSO"
+title: "nontes on survival"
 description: "notes"
 category: notes
-tags: [LASSO]
+tags: [survival]
 ---
