@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-<p><img src="https://github.com/zkwang2014/zkwang2014.github.io/raw/master/about/photo_1024.jpg" width = "150" height = "200" title="zkwang" align="center" /></p> 
+<p><img src="https://github.com/zkwang2014/zkwang2014.github.io/raw/master/documents/photo_1024.jpg" width = "150" height = "200" title="zkwang" align="center" /></p> 
 
 This is a blog about Statistics by Kai. I'm a second year Biostatistics graduate student at University of Florida [Department of Biostatistics](http://biostat.ufl.edu)
 
