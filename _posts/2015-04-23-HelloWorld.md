@@ -3,7 +3,7 @@ layout: post
 title: "Hello World"
 description: "blog"
 category: blog
-tags: [memo]
+tags: [blog]
 ---
 Hello World. 
 

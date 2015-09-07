@@ -3,5 +3,5 @@ layout: post
 title: "New Semester"
 description: "blog"
 category: blog
-tags: [memo]
+tags: [blog]
 ---
