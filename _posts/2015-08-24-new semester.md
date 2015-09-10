@@ -5,14 +5,15 @@ description: "blog"
 category: blog
 tags: [share]
 ---
-New semester starts. Sharing some tip for graduate students by Steven Shaw.
+New semester starts. Sharing a very useful blog for graduate students from a UF gator Alumni:
 
-###How Not to Suck at Graduate School － Steven R. Shaw
+How Not to Suck at Graduate School － Steven R. Shaw
 
-Steven R. Shaw is associate professor in the Department of Educational and Counselling Psychology at McGill University in Montreal. He earned a Ph.D. in School Psychology from the **University of Florida(_Go Gators!_)** in 1991.
+Steven R. Shaw is associate professor in the Department of Educational and Counselling Psychology at McGill University in Montreal. He earned a Ph.D. in School Psychology from the University of Florida (_Go Gators!_) in 1991.
 
 
 In his Blog, Dr. Shaw shared a very long list of posts about how not to suck at graduate school. Here are some of the posts:
+
 - How Not to Suck at Taking Initiative
 - How Not to Suck at Efficiency: Some Technology Suggestions
 - How not to suck at reviewing articles for scholarly journals
@@ -23,7 +24,7 @@ Here's a selection post:
 
 ###How Not to Suck at Finding a Match with a Supervisor (or PI)
 
-November 2, 2014
+_November 2, 2014_
 
 <div class="align-justify">
 As always, I acknowledge that there are many ways to find a good supervisor. The culture of matching with a supervisor also varies across fields of study and universities. However, these are my experiences and what I have learned in trying to find the best possible graduate student and supervisor match.
@@ -39,7 +40,6 @@ The other part of the equation concerns what potential supervisors are looking f
 Although I supervise many students, I do not mentor all of them. Some students do their research and graduate, but I do not have a close personal relationship nor do I give a lot of career advice. That is fine. One cannot force a mentorship relationship upon students or supervisors. The best supervision situation is to have students who are protégés. They become trusted colleagues and research partners. It is with these students that we have the most productive and rewarding relationships. With these students I argue, share, create, and develop partnerships that will last for a long time. I look for students with potential to be protégés. Therefore, I am looking for leadership, initiative, work habits, toughness, confidence, drive, and energy. Passive students do not tend to work for me. In my lab, we have “stupid question time.” This is where students develop their most weird and assumption-challenging questions and comments. The expectation is that people will take chances, be creative, and trust their colleagues not to tease or mock out-of-the-box ideas. I want people who are creative thinkers, are always prepared, and can contribute to stupid question time. In addition, toughness and persistence are enormous factors. Few, if any, graduate students go through an entire graduate program without challenges or rough times. Is there any evidence that they have a drive to complete their goals and can overcome difficult situations? I do not want followers or minions. I want partners and butt kickers. Sometimes I think a student has potential to be a butt kicker, but they do not see it yet. Ultimately, my question is: what can this student bring to my lab? I look for skills or interests that will add to the lab, not duplicate what we already have. Diversity of ideas and background keep the ideas of the lab creative and dynamic. Any evidence of interpersonal problems, arrogance, potential divisiveness in the lab, or lack of work ethic will exclude the student from joining my lab and being under my supervision. Not everyone will be a protégé, yet I am always searching for people with potential to take on that role.  
 
 Finding a supervisor is a major life decision. There are so many stories of graduate supervisors abusing, neglecting, or otherwise providing poor supervision as to be cliché. Students can prevent some of these problems by vetting potential supervisors, knowing their own needs concerning supervision style, and determine if they have the skills and temperament to meet the needs of the supervisor in this essential partnership.
-
-
-S. R. Shaw
 </div>
+
+**S. R. Shaw**
