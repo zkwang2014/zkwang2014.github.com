@@ -1,4 +1,5 @@
-{% highlight R %}
+{% highlight S, S-Plus, R %}
+
 function (n=150,varcon=2) 
 {
 library(MASS)
@@ -59,4 +60,5 @@ unpencor<-cor(x,y%*%unpenalized)
 list(lam=lam$lambda.min,nlam=length(lam$lambda),beta=round(beta[,whichmin],5),lmbeta=round(lm.out,5),
 pencor=pencor,penstepcor=penstepcor,unpencor=unpencor,truecor=truecor)
 }
+
 {% endhighlight %}
