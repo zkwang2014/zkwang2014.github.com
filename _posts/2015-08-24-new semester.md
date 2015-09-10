@@ -3,16 +3,17 @@ layout: post
 title: "New Semester - How Not to Suck at Graduate School"
 description: "blog"
 category: blog
-tags: [share]
+tags: [sharing]
 ---
-New semester starts. Sharing a very useful blog for graduate students from a UF gator Alumni:
+New semester starts. It's my second year at UF and a very important year. I'd like to share a very useful blog from one of our very own UF Gator Alumni for graduate students:
 
-How Not to Suck at Graduate School － Steven R. Shaw
+**How Not to Suck at Graduate School － Steven R. Shaw**
+<https://www.mcgill.ca/connectionslab/blogs>
 
-Steven R. Shaw is associate professor in the Department of Educational and Counselling Psychology at McGill University in Montreal. He earned a Ph.D. in School Psychology from the University of Florida (_Go Gators!_) in 1991.
+Steven R. Shaw is an associate professor in the Department of Educational and Counselling Psychology at McGill University in Montreal, Canada. He earned his Ph.D. in _School Psychology_ from the University of Florida (Go Gators!) in 1991.
 
 
-In his Blog, Dr. Shaw shared a very long list of posts about how not to suck at graduate school. Here are some of the posts:
+In his Blog, Dr. Shaw shared a very long list of posts about how not to suck at graduate school. Here are some titles of the posts:
 
 - How Not to Suck at Taking Initiative
 - How Not to Suck at Efficiency: Some Technology Suggestions
