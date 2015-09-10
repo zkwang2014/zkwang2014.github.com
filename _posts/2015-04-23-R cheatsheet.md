@@ -1,5 +1,5 @@
 {% highlight r %}
-
+<p>
 ```r
 
 function (n=150,varcon=2) 
@@ -64,5 +64,6 @@ pencor=pencor,penstepcor=penstepcor,unpencor=unpencor,truecor=truecor)
 }
 
 ```
+</p>
 
 {% endhighlight %}
