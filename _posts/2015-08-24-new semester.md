@@ -26,8 +26,7 @@ Here's a selection post:
 ###How Not to Suck at Finding a Match with a Supervisor (or PI)
 
 _November 2, 2014_
-
-<div class="align-justify">
+<div align="justify">
 As always, I acknowledge that there are many ways to find a good supervisor. The culture of matching with a supervisor also varies across fields of study and universities. However, these are my experiences and what I have learned in trying to find the best possible graduate student and supervisor match.
 
 The quality of the relationship between student and supervisor is probably the best predictor of graduate school satisfaction and success. Therefore, the decision concerning matching with your supervisor is the most important graduate school decision that you make. The basics of finding a supervisor are fairly simple and well known: identify supervisors at the same time that you are exploring universities for graduate school; contact potential supervisors as soon as possible; determine the style of supervision that the potential supervisor uses; find out graduation and success rates of students working with this supervisor; interview current and past students who are or have worked with this supervisor; find out if most of the supervisor’s publications are with students and do students have the opportunity to be first authors on papers; and interview trusted people in the field. Obviously, there are the other criteria that are important as well such as, acceptance to the program and university, financial package, quality of life, mobility, and such. The biggest mistake that people make is that they pursue potential supervisors who study in a specific field of interest or are major leaders in the field. Although these are important factors, I would argue that matching supervision style and how the supervisor treats students is far more important. 
