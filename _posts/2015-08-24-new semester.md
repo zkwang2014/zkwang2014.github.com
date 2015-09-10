@@ -10,7 +10,7 @@ New semester starts. It's my second year at UF and a very important year. I'd li
 **How Not to Suck at Graduate School － Steven R. Shaw**
 <https://www.mcgill.ca/connectionslab/blogs>
 
-Steven R. Shaw is an associate professor in the Department of Educational and Counselling Psychology at McGill University in Montreal, Canada. He earned his Ph.D. in _School Psychology_ from the University of Florida (Go Gators!) in 1991.
+Steven R. Shaw is an associate professor in the Department of Educational and Counselling Psychology at McGill University in Montreal, Canada. He earned his Ph.D. in _School Psychology_ from the University of Florida (Go Gators! ) in 1991.
 
 
 In his Blog, Dr. Shaw shared a very long list of posts about how not to suck at graduate school. Here are some titles of the posts:
