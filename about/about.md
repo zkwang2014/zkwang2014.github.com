@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-<p><img src="https://github.com/zkwang2014/zkwang2014.github.io/raw/master/documents/photo_1024.jpg" width = "150" height = "200" title="zkwang" align="center" /></p> 
+<p><img src="https://github.com/zkwang2014/zkwang2014.github.io/raw/master/documents/photo_1024.jpg" width = "300" height = "400" title="zkwang" align="center" /></p> 
 
 
 This is a blog about my experiences of study in Statistics. I am currently a second year graduate student at University of Florida Department of Biostatistics [M.S. in Biostatistics](http://biostat.ufl.edu/education/ms-in-biostatistics/) program and expected to graduate in 2016.
