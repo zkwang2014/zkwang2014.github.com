@@ -1,9 +1,10 @@
-markdown: rdiscount
+markdown: kramdown
 permalink: /:year/:month/:day/:title/
 url: http://zkwang.org
 author: zkwang
-pygments: true
-highlighter: pygments
 safe: true
 paginate: 16
 auto: true
+kramdown:
+input: GFM
+syntax_highlighter: rouge
