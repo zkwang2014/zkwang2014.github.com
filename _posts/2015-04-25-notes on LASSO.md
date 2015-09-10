@@ -9,7 +9,7 @@ Take a look at the definition of the Lasso in the paper “lasso.pdf” by Tibsh
 
 In class on Apr 9 we will discuss the Lasso as a group, and we will discuss the program sim.2r, below.  The output of sim.2r is included after sim.2r.  
 
-````
+{% highlight r %}
 > sim2.r
 function (n=150,varcon=2) 
 {
@@ -105,4 +105,4 @@ $unpencor
 $truecor
      [,1]
 [1,]  0.5
-````
+{% endhighlight %}

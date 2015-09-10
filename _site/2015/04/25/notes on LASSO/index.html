@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="author" content="zkwang" />
+        <title>notes on LASSO | zkwang</title>
+        <link rel="shortcut icon" href="/favicon.ico">
+            <link href="/feed/" rel="alternate" title="zkwang" type="application/atom+xml" />
+            <link rel="stylesheet" href="/media/css/style.css">
+                <link rel="stylesheet" href="/media/css/highlight.css">
+                    <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
+                    </head>
+    <script type="text/javascript">
+        function setTimeSpan(){
+            var date = new Date();
+            timeSpan.innerText=date.format('yyyy-MM-dd hh:mm:ss');
+        }
+    
+    Date.prototype.format = function(format)
+    {
+        var o =
+        {
+            "M+" : this.getMonth()+1, //month
+            "d+" : this.getDate(),    //day
+            "h+" : this.getHours(),   //hour
+            "m+" : this.getMinutes(), //minute
+            "s+" : this.getSeconds(), //second
+            "q+" : Math.floor((this.getMonth()+3)/3),  //quarter
+            "S" : this.getMilliseconds() //millisecond
+        }
+        if(/(y+)/.test(format))
+        format=format.replace(RegExp.$1,(this.getFullYear()+"").substr(4 - RegExp.$1.length));
+        for(var k in o)
+        if(new RegExp("("+ k +")").test(format))
+        format = format.replace(RegExp.$1,RegExp.$1.length==1 ? o[k] : ("00"+ o[k]).substr((""+ o[k]).length));
+        return format;
+    }
+    </script>
+    <body onLoad="setInterval(setTimeSpan,1000);">
+        <div id="container">
+            <div id="main" role="main">
+                <header>
+                    <h1>notes on LASSO</h1>
+                </header>
+                <nav>
+                    <span><a title="home page" class="" href="/">Timeline</a></span>
+                    <span><a title="categories" class="" href="/categories/">Categories</a></span>
+                    <span><a title="tags" class="" href="/tags/">Tags</a></span>
+                    <span><a title="about" class="" href="/about/">About</a></span>
+                    <span><a title="CN Blog" class="" href="http://zkwang2014.wordpress.com/" target="_blank">CN Blog</a></span>
+                    <span><a title="UF Biostat" class="" href="http://biostat.ufl.edu/education/ms-in-biostatistics/" target="_blank">UF Biostat</a></span>
+                    <!-- <span><a title="links" class="" href="/links/">Links</a></span> -->
+                    <span><a title="subscribe by RSS" class="" href="/feed/">Subscribe</a></span>
+                </nav>
+                <article class="content">
+                    <section class="post">
+    <p>Take a look at the definition of the Lasso in the paper “lasso.pdf” by Tibshirani.  Then take a look at the manual for the R package “glmnet” in the paper “glmnet.pdf”.  The package glmnet can be used to implement the Lasso.  </p>
+
+<p>In class on Apr 9 we will discuss the Lasso as a group, and we will discuss the program sim.2r, below.  The output of sim.2r is included after sim.2r.  </p>
+
+<div class="highlight"><pre><code class="language-r" data-lang="r"><span class="o">&gt;</span> sim2.r
+<span class="kr">function</span> <span class="p">(</span>n<span class="o">=</span><span class="m">150</span><span class="p">,</span>varcon<span class="o">=</span><span class="m">2</span><span class="p">)</span> 
+<span class="p">{</span>
+<span class="kn">library</span><span class="p">(</span>MASS<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>glmnet<span class="p">)</span>
+cov_x<span class="o">&lt;-</span>varcon<span class="o">*</span><span class="m">1</span>
+cov_y<span class="o">&lt;-</span>varcon<span class="o">*</span><span class="kp">diag</span><span class="p">(</span><span class="m">21</span><span class="p">)</span>
+vg1<span class="o">&lt;-</span><span class="kp">rep</span><span class="p">(</span><span class="m">1</span><span class="o">/</span><span class="kp">sqrt</span><span class="p">(</span><span class="m">5</span><span class="p">),</span><span class="m">5</span><span class="p">)</span>
+vg0<span class="o">&lt;-</span><span class="kp">rep</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">16</span><span class="p">)</span>
+vg<span class="o">&lt;-</span><span class="kt">c</span><span class="p">(</span>vg1<span class="p">,</span>vg0<span class="p">)</span>
+
+beta_g<span class="o">&lt;-</span>vg
+cov_yx<span class="o">&lt;-</span>beta_g
+cov_xy<span class="o">&lt;-</span><span class="kp">t</span><span class="p">(</span>beta_g<span class="p">)</span>
+truecor<span class="o">&lt;-</span>cov_xy<span class="o">%*%</span>beta_g<span class="o">/</span>varcon
+
+cov<span class="o">&lt;-</span><span class="kt">matrix</span><span class="p">(,</span><span class="m">22</span><span class="p">,</span><span class="m">22</span><span class="p">)</span>
+cov<span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">]</span><span class="o">&lt;-</span>cov_x
+cov<span class="p">[</span><span class="kt">c</span><span class="p">(</span><span class="m">2</span><span class="o">:</span><span class="m">22</span><span class="p">),</span><span class="kt">c</span><span class="p">(</span><span class="m">2</span><span class="o">:</span><span class="m">22</span><span class="p">)]</span><span class="o">&lt;-</span>cov_y
+cov<span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="kt">c</span><span class="p">(</span><span class="m">2</span><span class="o">:</span><span class="m">22</span><span class="p">)]</span><span class="o">&lt;-</span>cov_xy
+cov<span class="p">[</span><span class="kt">c</span><span class="p">(</span><span class="m">2</span><span class="o">:</span><span class="m">22</span><span class="p">),</span><span class="m">1</span><span class="p">]</span><span class="o">&lt;-</span>cov_yx
+<span class="c1">#set.seed(20)</span>
+z<span class="o">&lt;-</span>mvrnorm<span class="p">(</span>n<span class="o">=</span>n<span class="p">,</span>mu<span class="o">=</span><span class="kp">rep</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">22</span><span class="p">),</span>Sigma<span class="o">=</span>cov<span class="p">,</span>tol <span class="o">=</span> <span class="m">1e-5</span><span class="p">,</span> empirical <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+x<span class="o">&lt;-</span>z<span class="p">[,</span><span class="m">1</span><span class="p">]</span>
+y<span class="o">&lt;-</span>z<span class="p">[,</span><span class="kt">c</span><span class="p">(</span><span class="m">2</span><span class="o">:</span><span class="m">22</span><span class="p">)]</span>
+<span class="kp">dimnames</span><span class="p">(</span>y<span class="p">)[[</span><span class="m">2</span><span class="p">]]</span><span class="o">&lt;-</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">21</span><span class="p">)</span>
+dat<span class="o">&lt;-</span><span class="kt">data.frame</span><span class="p">(</span><span class="kp">cbind</span><span class="p">(</span>x<span class="p">,</span>y<span class="p">))</span>
+lm.out<span class="o">&lt;-</span>lm<span class="p">(</span>x<span class="o">~</span><span class="m">-1+.</span><span class="p">,</span>dat<span class="p">)</span><span class="o">$</span>coef
+lam<span class="o">&lt;-</span>cv.glmnet<span class="p">(</span>x<span class="o">=</span>y<span class="p">,</span>y<span class="o">=</span>x<span class="p">,</span>family<span class="o">=</span><span class="s">&quot;gaussian&quot;</span><span class="p">)</span>
+ids<span class="o">&lt;-</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="kp">length</span><span class="p">(</span>lam<span class="o">$</span>lambda<span class="p">))</span>
+whichmin<span class="o">&lt;-</span>ids<span class="p">[</span>lam<span class="o">$</span>lambda<span class="o">==</span>lam<span class="o">$</span>lambda.min<span class="p">]</span>
+<span class="kp">beta</span><span class="o">&lt;-</span>lam<span class="o">$</span>glmnet.fit<span class="o">$</span><span class="kp">beta</span>
+penalized<span class="o">&lt;-</span><span class="kp">round</span><span class="p">(</span><span class="kp">beta</span><span class="p">[,</span>whichmin<span class="p">],</span><span class="m">5</span><span class="p">)</span>
+unpenalized<span class="o">&lt;-</span><span class="kp">round</span><span class="p">(</span>lm.out<span class="p">,</span><span class="m">5</span><span class="p">)</span>
+<span class="c1">## step function</span>
+s<span class="o">&lt;-</span><span class="kt">matrix</span><span class="p">(</span><span class="m">0</span><span class="p">,</span>n<span class="p">,</span><span class="m">21</span><span class="p">)</span>
+s<span class="p">[,</span><span class="m">1</span><span class="p">]</span><span class="o">&lt;-</span>y<span class="p">[,</span><span class="m">1</span><span class="p">]</span>
+<span class="kr">for</span> <span class="p">(</span>i <span class="kr">in</span> <span class="m">2</span><span class="o">:</span><span class="m">21</span><span class="p">)</span>
+s<span class="p">[,</span>i<span class="p">]</span><span class="o">&lt;-</span><span class="kp">apply</span><span class="p">(</span>y<span class="p">[,</span><span class="m">1</span><span class="o">:</span>i<span class="p">],</span><span class="m">1</span><span class="p">,</span><span class="kp">sum</span><span class="p">)</span>
+lam2<span class="o">&lt;-</span>cv.glmnet<span class="p">(</span>x<span class="o">=</span>s<span class="p">,</span>y<span class="o">=</span>x<span class="p">,</span>family<span class="o">=</span><span class="s">&quot;gaussian&quot;</span><span class="p">)</span>
+ids2<span class="o">&lt;-</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="kp">length</span><span class="p">(</span>lam2<span class="o">$</span>lambda<span class="p">))</span>
+whichmin2<span class="o">&lt;-</span>ids<span class="p">[</span>lam2<span class="o">$</span>lambda<span class="o">==</span>lam2<span class="o">$</span>lambda.min<span class="p">]</span>
+tmp<span class="o">&lt;-</span><span class="kp">round</span><span class="p">(</span>lam2<span class="o">$</span>glmnet.fit<span class="o">$</span><span class="kp">beta</span><span class="p">[,</span>whichmin2<span class="p">],</span><span class="m">5</span><span class="p">)</span>
+beta2<span class="o">&lt;-</span><span class="kp">rep</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">21</span><span class="p">)</span>
+<span class="kr">for</span> <span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="m">21</span><span class="p">)</span>
+beta2<span class="p">[</span>i<span class="p">]</span><span class="o">&lt;-</span><span class="kp">sum</span><span class="p">(</span>tmp<span class="p">[</span><span class="m">21</span><span class="o">:</span>i<span class="p">])</span>
+penalizedstep<span class="o">&lt;-</span>beta2
+<span class="c1">##</span>
+par<span class="p">(</span>mfrow<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">))</span>
+plot<span class="p">(</span>penalized<span class="p">)</span>
+abline<span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">)</span>
+plot<span class="p">(</span>penalizedstep<span class="p">)</span>
+abline<span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">)</span>
+plot<span class="p">(</span>unpenalized<span class="p">)</span>
+abline<span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">)</span>
+pencor<span class="o">&lt;-</span>cor<span class="p">(</span>x<span class="p">,</span>y<span class="o">%*%</span>penalized<span class="p">)</span>
+penstepcor<span class="o">&lt;-</span>cor<span class="p">(</span>x<span class="p">,</span>y<span class="o">%*%</span>penalizedstep<span class="p">)</span>
+unpencor<span class="o">&lt;-</span>cor<span class="p">(</span>x<span class="p">,</span>y<span class="o">%*%</span>unpenalized<span class="p">)</span>
+<span class="kt">list</span><span class="p">(</span>lam<span class="o">=</span>lam<span class="o">$</span>lambda.min<span class="p">,</span>nlam<span class="o">=</span><span class="kp">length</span><span class="p">(</span>lam<span class="o">$</span>lambda<span class="p">),</span>beta<span class="o">=</span><span class="kp">round</span><span class="p">(</span><span class="kp">beta</span><span class="p">[,</span>whichmin<span class="p">],</span><span class="m">5</span><span class="p">),</span>lmbeta<span class="o">=</span><span class="kp">round</span><span class="p">(</span>lm.out<span class="p">,</span><span class="m">5</span><span class="p">),</span>
+pencor<span class="o">=</span>pencor<span class="p">,</span>penstepcor<span class="o">=</span>penstepcor<span class="p">,</span>unpencor<span class="o">=</span>unpencor<span class="p">,</span>truecor<span class="o">=</span>truecor<span class="p">)</span>
+<span class="p">}</span>
+
+<span class="o">$</span>lam
+<span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="m">0.08031</span>
+
+<span class="o">$</span>nlam
+<span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="m">64</span>
+
+<span class="o">$</span><span class="kp">beta</span>
+       <span class="m">1</span>        <span class="m">2</span>        <span class="m">3</span>        <span class="m">4</span>        <span class="m">5</span>        <span class="m">6</span>        <span class="m">7</span>        <span class="m">8</span>        <span class="m">9</span>       <span class="m">10</span>       <span class="m">11</span> 
+ <span class="m">0.22048</span>  <span class="m">0.17928</span>  <span class="m">0.11362</span>  <span class="m">0.23612</span>  <span class="m">0.21675</span>  <span class="m">0.01679</span>  <span class="m">0.00000</span> <span class="m">-0.08712</span>  <span class="m">0.01972</span>  <span class="m">0.00000</span> <span class="m">-0.14530</span> 
+      <span class="m">12</span>       <span class="m">13</span>       <span class="m">14</span>       <span class="m">15</span>       <span class="m">16</span>       <span class="m">17</span>       <span class="m">18</span>       <span class="m">19</span>       <span class="m">20</span>       <span class="m">21</span> 
+ <span class="m">0.00000</span>  <span class="m">0.00000</span>  <span class="m">0.00000</span>  <span class="m">0.00000</span>  <span class="m">0.00000</span>  <span class="m">0.01039</span>  <span class="m">0.00000</span> <span class="m">-0.08620</span> <span class="m">-0.01936</span>  <span class="m">0.01104</span> 
+
+<span class="o">$</span>lmbeta
+      X1       X2       X3       X4       X5       X6       X7       X8       X9      X10      X11 
+ <span class="m">0.32184</span>  <span class="m">0.20241</span>  <span class="m">0.16064</span>  <span class="m">0.30830</span>  <span class="m">0.27180</span>  <span class="m">0.10042</span>  <span class="m">0.02708</span> <span class="m">-0.15660</span>  <span class="m">0.09694</span> <span class="m">-0.03185</span> <span class="m">-0.19897</span> 
+     X12      X13      X14      X15      X16      X17      X18      X19      X20      X21 
+ <span class="m">0.01429</span>  <span class="m">0.02767</span> <span class="m">-0.00613</span> <span class="m">-0.04770</span> <span class="m">-0.01259</span>  <span class="m">0.06627</span>  <span class="m">0.04850</span> <span class="m">-0.13220</span> <span class="m">-0.07541</span>  <span class="m">0.07728</span> 
+
+<span class="o">$</span>pencor
+        <span class="p">[,</span><span class="m">1</span><span class="p">]</span>
+<span class="p">[</span><span class="m">1</span><span class="p">,]</span> <span class="m">0.65817</span>
+
+<span class="o">$</span>penstepcor
+        <span class="p">[,</span><span class="m">1</span><span class="p">]</span>
+<span class="p">[</span><span class="m">1</span><span class="p">,]</span> <span class="m">0.58997</span>
+
+<span class="o">$</span>unpencor
+        <span class="p">[,</span><span class="m">1</span><span class="p">]</span>
+<span class="p">[</span><span class="m">1</span><span class="p">,]</span> <span class="m">0.67855</span>
+
+<span class="o">$</span>truecor
+     <span class="p">[,</span><span class="m">1</span><span class="p">]</span>
+<span class="p">[</span><span class="m">1</span><span class="p">,]</span>  <span class="m">0.5</span></code></pre></div>
+
+</section>
+<section class="meta">
+    
+    <br/>
+    <br/>
+    <span>
+        <a  href="http://zkwang.org/2015/04/23/markdown%20cheatsheet/" class="pageNav"  >Previous</a>
+        &nbsp;&nbsp;&nbsp;
+        <a  href="http://zkwang.org/2015/05/01/bolg/" class="pageNav"  >Next</a>
+    </span>
+    <hr>
+    <span class="author">
+        <a href="http://zkwang.org">zkwang</a>
+    </span>
+    <span class="time">
+        /
+        <time datetime="2015-04-25">2015-04-25</time>
+    </span>
+    <br />
+    <span class="license">
+        Published under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">(CC) BY-NC-SA</a>
+    </span>
+    <br />
+    
+    <span class="categories">
+        in categories
+        
+        <a href="/categories/#notes" title="notes">notes</a>&nbsp;
+        
+    </span>
+    
+    
+    <span class="tags">
+        tagged with
+        
+        <a href="/tags/#LASSO" title="LASSO">LASSO</a>&nbsp;
+        
+    </span>
+    
+</section>
+<!--
+ <script type="text/javascript">
+ $(function(){
+ $(document).keydown(function(e) {
+ var url = false;
+ if (e.which == 37 || e.which == 74) {  // Left arrow and J
+ 
+ url = 'http://zkwang.org/2015/04/23/markdown%20cheatsheet/';
+ 
+ }
+ else if (e.which == 39 || e.which == 75) {  // Right arrow and K
+ 
+ url = 'http://zkwang.org/2015/05/01/bolg/';
+ 
+ }
+ if (url) {
+ window.location = url;
+ }
+ });
+ })
+ </script>
+ -->
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'zkwang';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+    </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    <br/>
+    <br/>
+
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-category="$cat[catid]" data-thread-key="$article[aid]" data-title="$article[title]" data-author-key="$article[uid]"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"zkwang"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+                </article>
+            </div>
+            
+            <footer>
+                <p><small>Powered by <a href="http://jekyllrb.com/">Jekyll</a> & <a href="http://pages.github.com">GitHub</a> | themes by <a href="https://github.com/yihui">yihui</a> & <a href="https://github.com/webfrogs">webfrogs</a> | Copyright 2015 by <a href="https://github.com/zkwang2014/">zkwang</a> 
+                    </footer>
+                    
+                    </div>
+                    
+               <script type="text/javascript">
+                    var _gaq = _gaq || [];
+                    _gaq.push(['_setAccount', 'UA-34960818-1']);
+                    _gaq.push(['_trackPageview']);
+                    (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                    })();
+                    </script>
+                    
+                    <!-- Baidu Button BEGIN -->
+                    <script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=4&amp;pos=right&amp;uid=541841" ></script>
+                    <script type="text/javascript" id="bdshell_js"></script>
+                    <script type="text/javascript">
+                        var bds_config={"bdTop":170};
+                        document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+                        </script>
+                    <!-- Baidu Button END -->
+                    <div align="center">
+                    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256247069'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1256247069%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+                    </div> 
+                    </body>
+</html>

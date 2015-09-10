@@ -6,3 +6,4 @@ safe: true
 paginate: 16
 auto: true
 pygments: true
+excerpt_separator: ""
