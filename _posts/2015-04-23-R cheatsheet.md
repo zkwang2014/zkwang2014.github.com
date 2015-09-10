@@ -1,3 +1,10 @@
+---
+layout: post
+title: "R cheatsheet"
+description: "r"
+category: notes
+tags: [notes]
+---
 ``` r
 
 function (n=150,varcon=2) 
