@@ -1,4 +1,4 @@
-{% highlight r%}
+{% highlight r %}
 ````
 function (n=150,varcon=2) 
 {
@@ -61,4 +61,4 @@ list(lam=lam$lambda.min,nlam=length(lam$lambda),beta=round(beta[,whichmin],5),lm
 pencor=pencor,penstepcor=penstepcor,unpencor=unpencor,truecor=truecor)
 }
 ````
-{% endhightlight %}
+{% endhighlight %}
