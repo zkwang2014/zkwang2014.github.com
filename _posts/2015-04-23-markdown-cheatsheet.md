@@ -2,7 +2,7 @@
 layout: post
 title: "markdown cheatsheet"
 description: "blog"
-category: blog
+category: notes
 tags: [sharing, markdown]
 ---
 #Headers
