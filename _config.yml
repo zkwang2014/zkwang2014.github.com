@@ -6,5 +6,5 @@ safe: true
 paginate: 16
 auto: true
 kramdown:
-input: GFM
-syntax_highlighter: rouge
+    input: GFM
+    syntax_highlighter: rouge
