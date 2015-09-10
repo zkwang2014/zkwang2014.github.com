@@ -1,4 +1,4 @@
-{% highlight S, S-Plus, R %}
+{% highlight r %}
 
 function (n=150,varcon=2) 
 {
