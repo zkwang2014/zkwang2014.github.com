@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Notes on Clustering"
-description: "clustering"
+title: "notes on survival"
+description: "survival"
 category: notes
 tags: [cluster]
 ---
@@ -45,5 +45,5 @@ tags: [cluster]
 
 <div id="pdf">It appears you don't have Adobe Reader or PDF support in your web browser. Under testing, Safari and Chrome works fine. You may <a href="documents/Lecture 4 notes.pdf.pdf">Click here to download the PDF</a></div>
 
-Class notes on Survial Analysis.
+Tuesday Class notes for Survial Analysis.
 
