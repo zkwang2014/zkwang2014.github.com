@@ -5,23 +5,9 @@
     <description></description>
     <link>http://zkwang.org/</link>
     <atom:link href="http://zkwang.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 10 Sep 2015 19:59:07 -0400</pubDate>
-    <lastBuildDate>Thu, 10 Sep 2015 19:59:07 -0400</lastBuildDate>
+    <pubDate>Thu, 10 Sep 2015 20:16:55 -0400</pubDate>
+    <lastBuildDate>Thu, 10 Sep 2015 20:16:55 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
-    
-      <item>
-        <title>notes on survival</title>
-        <description></description>
-        <pubDate>Tue, 01 Sep 2015 00:00:00 -0400</pubDate>
-        <link>http://zkwang.org/2015/09/01/notes%20on%20survival/</link>
-        <guid isPermaLink="true">http://zkwang.org/2015/09/01/notes%20on%20survival/</guid>
-        
-        <category>survival</category>
-        
-        
-        <category>notes</category>
-        
-      </item>
     
       <item>
         <title>New Semester - How Not to Suck at Graduate School</title>
@@ -92,22 +78,44 @@ As always, I acknowledge that there are many ways to find a good supervisor. The
     
       <item>
         <title>Notes on Cluster</title>
-        <description>&lt;p&gt;&lt;html&gt;
-  &lt;head&gt;
-     &lt;title&gt;PDFObject example&lt;/title&gt;
-     &lt;script type=&quot;text/javascript&quot; src=&quot;https://github.com/zkwang2014/zkwang2014.github.io/raw/master/documents/pdfobject.js&quot;&gt;&lt;/script&gt;
-     &lt;script type=&quot;text/javascript&quot;&gt;
-      window.onload = function (){
-        var myPDF = new PDFObject({ url: http://www.adobe.com/illustrator.pdf }).embed();
-      };
-    &lt;/script&gt;
-  &lt;/head&gt;&lt;/p&gt;
+        <description>&lt;style type=&quot;text/css&quot;&gt;
+&lt;!--
+
+#pdf {
+    width: 500px;
+    height: 300px;
+    margin: 2em auto;
+    border: 10px solid #6699FF;
+}
+
+#pdf p {
+   padding: 1em;
+}
+
+#pdf object {
+   display: block;
+   border: solid 1px #666;
+}
+
+--&gt;
+&lt;/style&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/media/css/pdfobject.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+window.onload = function (){
+
+    var success = new PDFObject({ url: &quot;/pdf/sample.pdf&quot; }).embed(&quot;pdf&quot;);
+    
+};
+
+&lt;/script&gt; 
 
 &lt;p&gt;&lt;body&gt;
     &lt;p&gt;It appears you don&amp;#39;t have Adobe Reader or PDF support in this web
     browser. &lt;a href=&quot;http://www.adobe.com/illustrator.pdf&quot;&gt;Click here to download the PDF&lt;/a&gt;&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;&lt;/p&gt;
+  &lt;/body&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 08 May 2015 00:00:00 -0400</pubDate>
         <link>http://zkwang.org/2015/05/08/cluster/</link>
