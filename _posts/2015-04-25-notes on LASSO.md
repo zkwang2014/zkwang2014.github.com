@@ -5,9 +5,9 @@ description: "notes"
 category: notes
 tags: [LASSO]
 ---
-Take a look at the definition of the Lasso in the paper “lasso.pdf” by Tibshirani.  Then take a look at the manual for the R package “glmnet” in the paper “glmnet.pdf”.  The package glmnet can be used to implement the Lasso.  
+The definition of the Lasso is in the paper “Regression Shrinkage and Selection via the Lasso” by Tibshirani.  Then R package “glmnet” can be used to implement the Lasso.  
 
-In class on Apr 9 we will discuss the Lasso as a group, and we will discuss the program sim.2r, below.  The output of sim.2r is included after sim.2r.  
+The program sim.2r, below is discussed in class.  The output of sim.2r is included after sim.2r.  
 
 {% highlight r %}
 > sim2.r
