@@ -9,6 +9,7 @@
             <link rel="stylesheet" href="/media/css/style.css">
                 <link rel="stylesheet" href="/media/css/highlight.css">
                     <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
+                    <script type="text/javascript" src="/media/js/pdfobject.js"></script>
                     </head>
     <script type="text/javascript">
         function setTimeSpan(){
@@ -54,20 +55,26 @@
                 </nav>
                 <article class="content">
                     <section class="post">
-    <script type="text/javascript" src="/media/css/pdfobject.js"></script>
+    <script type='text/javascript'>
 
-<script type="text/javascript">
+  function embedPDF(){
 
-window.onload = function (){
+    var myPDF = new PDFObject({ 
 
-    var success = new PDFObject({ url: "http://www.adobe.com/illustrator.pdf" }).embed("pdf");
-    
-};
+      url: 'https://github.com/zkwang2014/zkwang2014.github.io/raw/master/documents/2014Fall-PHC6001-Principles-of-Epidemiology-in-Public-Health.pdf'
+
+    }).embed('pdf'); 
+    // Be sure your document contains an element with the ID 'pdf' 
+
+  }
+
+  window.onload = embedPDF; //Feel free to replace window.onload if needed.
+
 </script>
 
-<p>This example uses one line of JavaScript wrapped in a <em>window.onload</em> statement.</p>
+<div id="pdf">
 
-<div id="pdf">It appears you don't have Adobe Reader or PDF support in this web browser. <a href="/pdf/sample.pdf">Click here to download the PDF</a></div>
+</div>
 
 </section>
 <section class="meta">
@@ -77,7 +84,7 @@ window.onload = function (){
     <span>
         <a  href="http://zkwang.org/2015/05/01/blog/" class="pageNav"  >Previous</a>
         &nbsp;&nbsp;&nbsp;
-        <a  href="http://zkwang.org/2015/05/24/cluster%20&%20prediction%20strengh/" class="pageNav"  >Next</a>
+        <a  href="http://zkwang.org/2015/08/24/new%20semester/" class="pageNav"  >Next</a>
     </span>
     <hr>
     <span class="author">
@@ -121,7 +128,7 @@ window.onload = function (){
  }
  else if (e.which == 39 || e.which == 75) {  // Right arrow and K
  
- url = 'http://zkwang.org/2015/05/24/cluster%20&%20prediction%20strengh/';
+ url = 'http://zkwang.org/2015/08/24/new%20semester/';
  
  }
  if (url) {
