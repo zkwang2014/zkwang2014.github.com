@@ -93,3 +93,8 @@ list(a=c(1,2),b="hi",c=3i);
 dim=c(3,4,2); elements of x recycle if x is not long enough  
 **matrix(x,nrow=,ncol=)** matrix; elements of x recycle  
 **factor(x,levels=)** encodes a vector x as a factor
+
+....
+et al.
+
+For more content, see the link of original post in the top.
