@@ -7,7 +7,7 @@ permalink: /about/
 <p><img src="https://github.com/zkwang2014/zkwang2014.github.io/raw/master/documents/Zhongkai Wang.jpg" width = "160" height = "240" title="zkwang" align="center" /></p> 
 
 
-This is a blog about my experiences of study in Statistics. I am currently a second year graduate student at University of Florida Department of Biostatistics [M.S. in Biostatistics](http://biostat.ufl.edu/education/ms-in-biostatistics/) program.
+This is a blog about my experiences of study. I am currently a second year graduate student at University of Florida Department of Biostatistics [M.S. in Biostatistics](http://biostat.ufl.edu/education/ms-in-biostatistics/) program.
 
 The Chinese version of this Blog is on [WordPress](https://zkwang2014.wordpress.com/). But it may not be up-to-date since I don't not use it very often. 
 
