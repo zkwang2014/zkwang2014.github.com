@@ -11,10 +11,10 @@ tags: [cluster]
 <!--
 
 #pdf {
-	width: 500px;
-	height: 300px;
+	width: 650px;
+	height: 1000px;
 	margin: 2em auto;
-	border: 10px solid #6699FF;
+	border: 5px solid #6699FF;
 }
 
 #pdf p {
