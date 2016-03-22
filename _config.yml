@@ -1,4 +1,4 @@
-markdown: redcarpet
+markdown: kramdown
 permalink: /:year/:month/:day/:title/
 url: http://zkwang.org
 author: zkwang
