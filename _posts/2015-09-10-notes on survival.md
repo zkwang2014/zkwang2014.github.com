@@ -43,7 +43,7 @@ tags: [cluster]
 
 </script>
 
-<div id="pdf">It appears you don't have Adobe Reader or PDF support in your web browser. Under testing, Safari and Chrome works fine. You may <a href="documents/Lecture 4 notes.pdf.pdf">Click here to download the PDF</a></div>
+<div id="pdf">Please wait for th .pdf file to load. If loading fails, it's likely you don't have Adobe Reader or PDF support in your web browser. Under testing, Safari and Chrome works fine. You may <a href="documents/Lecture 4 notes.pdf.pdf">Click here to download the PDF</a></div>
 
 Tuesday Class notes for Survial Analysis.
 
