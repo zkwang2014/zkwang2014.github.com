@@ -1,6 +1,6 @@
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
-url: http://zkwang.org
+url: zkwang2014.github.io
 author: zkwang
 safe: true
 paginate: 16
